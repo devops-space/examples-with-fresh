@@ -9,7 +9,8 @@
 button {
   color: inherit;
 }
-button, [role="button"] {
+button,
+[role="button"] {
   cursor: pointer;
 }
 code {
@@ -141,4 +142,74 @@ html {
     rgb(187, 247, 208),
     rgb(254, 249, 195)
   );
+}
+
+.counter {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+  padding: 0.75rem 1rem;
+  background-color: #fff;
+  border: 1px solid rgb(15 23 42 / 0.08);
+  border-radius: 1rem;
+  box-shadow:
+    0 1px 2px rgb(15 23 42 / 0.06),
+    0 16px 32px -20px rgb(15 23 42 / 0.45);
+}
+
+.counter-value {
+  min-width: 4ch;
+  font-size: 2.5rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  color: #0f172a;
+  text-align: center;
+}
+
+.counter button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  line-height: 1;
+  color: #334155;
+  background-color: #f8fafc;
+  border: 1px solid rgb(15 23 42 / 0.12);
+  border-radius: 9999px;
+  transition:
+    color 150ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 150ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 150ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 150ms cubic-bezier(0.4, 0, 0.2, 1),
+    transform 120ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.counter button:hover {
+  color: #0f172a;
+  background-color: #eef2f7;
+  border-color: rgb(15 23 42 / 0.22);
+  box-shadow: 0 2px 6px rgb(15 23 42 / 0.1);
+}
+
+.counter button:active {
+  background-color: #e2e8f0;
+  box-shadow: none;
+  transform: scale(0.94);
+}
+
+.counter button:focus-visible {
+  outline: 2px solid #16a34a;
+  outline-offset: 2px;
+}
+
+.counter button:disabled {
+  cursor: not-allowed;
+  opacity: 0.45;
 }
